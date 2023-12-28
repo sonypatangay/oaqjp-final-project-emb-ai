@@ -17,7 +17,7 @@ def emotion_detector(text_to_analyse):
         fear = emotion['emotion']['fear']
         joy  = emotion['emotion']['joy']
         sadness = emotion['emotion']['sadness']
-   elif response.status_code == 500:
+   elif response.status_code == 400:
         emotionKey = None
         anger = None
         disgust = None
@@ -25,7 +25,7 @@ def emotion_detector(text_to_analyse):
         joy = None
         sadness = None
     
-return {'anger': anger, 'disgust': disgust, 'anger': anger, 'fear': fear, 
+   return {'anger': anger, 'disgust': disgust, 'anger': anger, 'fear': fear, 
     'joy': joy, 'sadness': sadness, 'dominant_emotion': emotionKey }
 
    
